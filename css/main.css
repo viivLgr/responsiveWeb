@@ -1,0 +1,199 @@
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+html,body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #47a3da;
+}
+
+.container header,
+.container .main {
+    width: 96%;
+    margin: 0 auto;
+    max-width: 70em;
+    padding: 0 2em 3em 2em;
+}
+
+.container header {
+    padding: 3em 2em 2em;
+}
+
+.container header h1 {
+    font-weight: 400;
+}
+
+.container .main .time {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.container .main .time:after {
+    content: '';
+    width: 10px;
+    position: absolute;
+    left: 20%;
+    top: 0;
+    bottom: 0;
+    background-color: #afdcf8;
+}
+
+.container .main .time li {
+    position: relative;
+}
+
+.container .main .time li time {
+    width: 25%;
+    position: absolute;
+}
+
+.container .main .time li time span {
+    display: block;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.container .main .time li time span:first-child {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.container .main .time li time span:last-child {
+    font-size: 2.9em;
+    color: #3594cb;
+}
+
+.container .main .time li:nth-child(odd) time span:last-child {
+    color: #6cbfee;
+}
+
+.container .main .time li .label {
+    margin: 0 0 15px 25%;
+    background-color: #3594cb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding: 2em;
+    color: #fff;
+    font-size: 1.2em;
+    line-height: 1.4;
+    font-weight: 300;
+    position: relative;
+}
+
+.container .main .time li:nth-child(odd) .label {
+    background-color: #6cbfee;
+}
+
+.container .main .time li .label h2 {
+    padding: 0 0 10px;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.4);
+}
+
+.container .main .time li .label:after {
+    content: '';
+    width: 0;
+    height:0;
+    position: absolute;
+    right: 100%;
+    top: 1em;
+    pointer-events: none;
+    border: 10px solid transparent;
+    border-right-color: #3594cb;
+}
+
+.container .main .time li:nth-child(odd) .label:after {
+    border-right-color: #6cbfee;
+}
+
+@media only screen and (max-width: 55em) {
+
+    .container .main,
+    .container header {
+        width: 98%;
+        padding: 0 2em 1em 2em;
+    }
+
+    .container > header h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 55em) {
+
+    .container .main .time li time span:last-child {
+        font-size: 1.5em;
+    }
+/*
+    .container .main .time li time {
+        width: 20%;
+    }*/
+
+    .container .main .time li time span {
+        padding-right: 65px;
+    }
+
+    /*.container .main .time:after {
+        left: 15%;
+    }
+
+    .container .main .time li .label {
+        margin-left: 20%;
+    }*/
+}
+
+@media screen and (max-width: 40em) {
+    .container .main .time:after {
+        display: none;
+    }
+
+    .container .main .time li time {
+        width: 100%;
+        position: relative;
+    }
+
+    .container .main .time li time span {
+        text-align: left;
+    }
+
+    .container .main .time li .label {
+        margin: 2em 0 15px;
+    }
+
+    .container .main .time li .label:after{
+        top: -20px;
+        right: auto;
+        left: 20px;
+        border-right-color: transparent;
+        border-bottom-color: #3594cb;
+    }
+
+    .container .main .time li:nth-child(odd) .label:after {
+        border-right-color: transparent;
+        border-bottom-color: #6cbfee;
+    }
+
+}
